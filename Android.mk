@@ -12,6 +12,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+#USE PREBUILT otherwise big fuckup
+LOCAL_PATH := $(call my-dir)
+#COPY lineage-platform-res.apk
+$(shell mkdir -p $(TARGET_OUT)/framework/)
+$(shell cp $(LOCAL_PATH)/org.lineageos.platform-res.apk $(TARGET_OUT)/framework/org.lineageos.platform-res.apk)
+
+
+
+
+
 LOCAL_PATH := $(call my-dir)
 
 # We have a special case here where we build the library's resources
